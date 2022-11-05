@@ -1,6 +1,6 @@
 # thoughts_in_usd
 
-Wanted a place to drop notes and tools for building objects in usd, hopefully they help you reach your goals! 
+a place to drop notes and tools for documenting research and helping others build objects in usd.
 
 Thanks! 
 Julius
