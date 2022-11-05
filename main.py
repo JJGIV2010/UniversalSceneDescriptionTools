@@ -84,6 +84,9 @@ class USD_Discussion:
                 else:
                     pass
 
+    def _show_as_string(self):
+        print(self.stage.GetRootLayer().ExportToString())
+
 object_builder = USD_Discussion()
 
 object_builder.create_new_nested_object("food",["burritos","tacos"],[
