@@ -6,9 +6,9 @@ class USD_VariantTool:
         self.stage = omni.usd.get_context().get_stage()
         self.variant_dict = {
             "name":"",
-            "variant_sets":[],
-            "variants":[],
-            "variant_custom_attributes":[]
+            "variant_sets":[], # list of strings
+            "variants":[], # list of 2 value tuples (variant_set,variant)
+            "variant_custom_attributes":[] # (variant_set,variant,attribute,attribute_value)
         }
         self.sdf_dict = {
             int: Sdf.ValueTypeNames.Int,
@@ -89,14 +89,17 @@ class USD_VariantTool:
 
 object_builder = USD_VariantTool()
 
-object_builder.create_new_nested_object("food",["burritos","tacos"],[
-        ("burritos","chicken"),
+object_builder.create_new_nested_object(
+    "food", # string
+    ["burritos","tacos"], # list of strings
+    [
+        ("burritos","chicken"), # list of two value tuples
         ("burritos","fish"),
         ("burritos","carnitas"),
         ("tacos", "steak"),
         ("tacos", "chicken")
     ],[
-        ("burritos", "chicken","test_int",10),
+        ("burritos", "chicken","test_int",10), # list of four value tuples
         ("burritos", "fish","test_float",2.0),
         ("burritos", "carnitas","sauce","light"),
         ("tacos", "steak","sauce","none"),
