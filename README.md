@@ -1,6 +1,3 @@
-# thoughts_in_usd
+# UniversalSceneDescriptionTools
 
-a place to drop notes and tools for documenting research and helping others build objects in usd.
-
-Thanks! 
-Julius
+Created this directory to drop tools as I continue to learn more about usd. 
